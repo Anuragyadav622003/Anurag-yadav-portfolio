@@ -48,7 +48,7 @@ export default function UltimateHero() {
   return (
     <section 
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-6"
     >
       {/* 3D Background */}
       <ThreeScene />
