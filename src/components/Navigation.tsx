@@ -42,7 +42,7 @@ export default function Navigation() {
               className="flex items-center gap-2"
             >
               <Code2 className="w-8 h-8 text-primary" />
-              <span className="text-white font-bold text-xl">Anurag</span>
+              <span className="text-white font-bold text-xl">Anurag Yadav</span>
             </motion.div>
 
             <div className="hidden md:flex items-center gap-8">
