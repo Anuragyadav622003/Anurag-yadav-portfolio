@@ -1,0 +1,59 @@
+/* src/app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00d9ff;
+  --color-secondary: #ff2a6d;
+  --color-accent: #8a2be2;
+  --color-success: #00ff88;
+  --color-warning: #ffaa00;
+  --color-background: #0a0a0a;
+  --color-card: #1a1a1a;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-text-shimmer: text-shimmer 2.5s ease-in-out infinite;
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes text-shimmer {
+    0% { background-position: -500px 0; }
+    100% { background-position: 500px 0; }
+  }
+}
+
+/* Custom utilities */
+.gradient-text {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-accent));
+  background-size: 200% 200%;
+  animation: var(--animate-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.magnetic-button {
+  transition: transform 0.3s ease-out;
+}
+
+.magnetic-button:hover {
+  transform: scale(1.05);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: white;
+}
