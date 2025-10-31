@@ -86,7 +86,7 @@ export default function UltimateHero() {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-8 text-glow leading-none"
           >
-            <span className="gradient-text block">Anurag</span>
+            <span className="gradient-text block">Anurag Yadav</span>
             <motion.span 
               className="text-white block"
               initial={{ opacity: 0, x: -50 }}

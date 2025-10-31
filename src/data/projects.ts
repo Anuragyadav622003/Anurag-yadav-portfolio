@@ -8,8 +8,8 @@ export const projects: Project[] = [
     description: 'Machine Learning model to predict accident severity with 87% accuracy using Random Forest',
     category: 'ml',
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'Streamlit', 'Matplotlib'],
-    demoUrl: 'https://your-streamlit-app.streamlit.app',
-    codeUrl: 'https://github.com/anurag/accident-severity-predictor',
+    demoUrl: 'https://anuragyadav622003-accident-severity-ml-project-app-7vr64j.streamlit.app/',
+    codeUrl: 'https://github.com/Anuragyadav622003/accident-severity-ml-project',
     featured: true,
     metrics: {
       accuracy: '87%',
@@ -37,8 +37,8 @@ export const projects: Project[] = [
     description: 'Full-stack expense management application with real-time analytics and budgeting',
     category: 'fullstack',
     technologies: ['NestJS', 'PostgreSQL', 'Prisma', 'React', 'Tailwind CSS'],
-    demoUrl: 'https://expense-tracker-demo.vercel.app',
-    codeUrl: 'https://github.com/anurag/expense-tracker',
+    demoUrl: 'https://ledger-pulse-react.vercel.app/',
+    codeUrl: 'https://github.com/Anuragyadav622003/ledger-pulse-react',
     featured: true,
     metrics: {
       'API Response Time': '<200ms',
@@ -66,8 +66,8 @@ export const projects: Project[] = [
     description: 'Modern learning management system with interactive courses and progress tracking',
     category: 'fullstack',
     technologies: ['MERN Stack', 'Redux', 'Socket.io', 'Tailwind CSS'],
-    demoUrl: 'https://e-learning-platform.vercel.app',
-    codeUrl: 'https://github.com/anurag/e-learning-platform',
+    demoUrl: 'https://e-learning-plateform-six.vercel.app/',
+    codeUrl: 'https://github.com/Anuragyadav622003/E-Learning-Plateform',
     featured: true,
     metrics: {
       'Page Load Time': '<2s',
