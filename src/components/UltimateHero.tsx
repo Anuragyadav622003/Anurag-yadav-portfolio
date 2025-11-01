@@ -3,7 +3,7 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState, useRef } from 'react'
-import { ChevronDown, Sparkles, Cpu, Zap } from 'lucide-react'
+import { ChevronDown, Sparkles, Cpu, Zap,FileDown  } from 'lucide-react'
 import ThreeScene from './ThreeScene'
 import LiveStats from './LiveStats'
 import AIAssistant from './AIAssistant'
@@ -167,6 +167,21 @@ export default function UltimateHero() {
               Initiate Contact
             </a>
           </motion.div>
+          <motion.div
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="magnetic-button"
+>
+  <a 
+    href="/AnuragYadavResume.pdf"  // place your resume in /public/
+    download="Anurag_Yadav_Resume.pdf"
+    className="bg-gradient-to-r from-secondary to-primary text-black px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-4 group"
+  >
+    <FileDown className="w-6 h-6 group-hover:translate-y-1 transition-transform duration-300" />
+    Download Resume
+  </a>
+</motion.div>
+
         </motion.div>
 
         {/* Enhanced Scroll Indicator */}

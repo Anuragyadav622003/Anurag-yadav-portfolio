@@ -10,17 +10,17 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: <Github className="w-5 h-5" />,
-      href: "https://github.com/anurag",
+      href: "https://github.com/Anuragyadav622003/",
       label: "GitHub"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
-      href: "https://linkedin.com/in/anurag",
+      href: "https://www.linkedin.com/in/anurag-yadav-3704b1239/",
       label: "LinkedIn"
     },
     {
       icon: <Mail className="w-5 h-5" />,
-      href: "mailto:anurag@example.com",
+      href: "mailto:anuragyadav622003@gmail.com",
       label: "Email"
     }
   ]

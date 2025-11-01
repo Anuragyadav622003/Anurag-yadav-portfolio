@@ -104,87 +104,173 @@ import { Calendar, MapPin, Award, Rocket, Code2, Brain, ChevronDown, ExternalLin
 
 const experiences = [
   {
-    company: "TechCorp Solutions",
-    role: "Senior Full Stack Developer",
-    period: "2022 - Present",
-    location: "San Francisco, CA (Remote)",
-    description: "Lead development of enterprise-scale applications serving 50,000+ users with 99.9% uptime",
-    achievements: [
-      "Architected microservices platform reducing latency by 40% and improving scalability",
-      "Led team of 4 developers in implementing CI/CD pipelines cutting deployment time by 70%",
-      "Implemented real-time analytics dashboard processing 1M+ events daily",
-      "Mentored junior developers and established coding standards across 10+ projects"
-    ],
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Docker", "Kubernetes", "Redis"],
-    type: "work",
-    icon: <Rocket className="w-6 h-6" />,
-    metrics: [
-      { icon: <Users className="w-4 h-4" />, value: "50K+", label: "Users" },
-      { icon: <Zap className="w-4 h-4" />, value: "99.9%", label: "Uptime" },
-      { icon: <TrendingUp className="w-4 h-4" />, value: "40%", label: "Performance" }
-    ],
-    color: "from-blue-500 to-cyan-500",
-    companyLogo: "🚀"
-  },
+  company: "SoftXAI Private Limited AI Solutions / dotCompliance (US)",
+  role: "Software Engineer (Full Stack / Backend)",
+  period: "May 2025 - Present",
+  location: "Prayagraj, Uttar Pradesh, India",
+  description: "Contributed to global enterprise compliance systems serving 3M+ customers with 99.9% uptime and modernized backend architecture for scalability.",
+  achievements: [
+    "Refactored and migrated core backend from Python (Flask) to NestJS, improving code maintainability and reducing response latency by 30%.",
+    "Implemented robust unit tests, linting, and type coverage ensuring 100% CI/CD pipeline success across GitLab environments.",
+    "Designed and automated Lead Management System (Hot/Cold leads) using cron jobs to track expiring service contracts in real-time.",
+    "Developed modules for Order History, Interaction History, and Transport Details to enhance data traceability and business insights.",
+    "Collaborated with cross-functional teams to integrate PostgreSQL and MongoDB for optimized hybrid data storage solutions.",
+    "Improved developer productivity and reduced bug count by 55% through strict TypeScript standards, code reviews, and performance audits."
+  ],
+  technologies: ["React", "TypeScript", "TailwindCSS", "NestJS", "PostgreSQL", "MongoDB", "Python (Flask)", "Unit Testing"],
+  type: "work",
+  icon: <Rocket className="w-6 h-6" />,
+  metrics: [
+    { icon: <Users className="w-4 h-4" />, value: "3M+", label: "Customers" },
+    { icon: <Zap className="w-4 h-4" />, value: "99.9%", label: "Uptime" },
+    { icon: <TrendingUp className="w-4 h-4" />, value: "55%", label: "Code Quality" }
+  ],
+  color: "from-blue-500 to-cyan-500",
+  companyLogo: "🚀"
+}
+,
+  // {
+  //   company: "SoftXAI Private Limited AI Solutions",
+  //   role: "Software Engineer",
+  //   period: "2025 - Present",
+  //   location: "Prayagraj, Uttar Pradesh, India",
+  //   description: "Lead development of enterprise-scale applications serving 50,000+ users with 99.9% uptime",
+  //   achievements: [
+  //     "Architected microservices platform reducing latency by 40% and improving scalability",
+  //     "Led team of 4 developers in implementing CI/CD pipelines cutting deployment time by 70%",
+  //     "Implemented real-time analytics dashboard processing 1M+ events daily",
+  //     "Mentored junior developers and established coding standards across 10+ projects"
+  //   ],
+  //   technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Docker", "Kubernetes", "Redis"],
+  //   type: "work",
+  //   icon: <Rocket className="w-6 h-6" />,
+  //   metrics: [
+  //     { icon: <Users className="w-4 h-4" />, value: "50K+", label: "Users" },
+  //     { icon: <Zap className="w-4 h-4" />, value: "99.9%", label: "Uptime" },
+  //     { icon: <TrendingUp className="w-4 h-4" />, value: "40%", label: "Performance" }
+  //   ],
+  //   color: "from-blue-500 to-cyan-500",
+  //   companyLogo: "🚀"
+  // },
   {
-    company: "AI Research Lab",
-    role: "Machine Learning Engineer",
-    period: "2021 - 2022", 
-    location: "Boston, MA",
-    description: "Developed and deployed ML models for predictive analytics and computer vision applications",
-    achievements: [
-      "Built ensemble models achieving 94% accuracy on complex classification tasks",
-      "Reduced model inference time by 70% through optimization and quantization",
-      "Published research paper on novel neural network architectures",
-      "Implemented automated ML pipelines serving 10,000+ predictions daily"
-    ],
-    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Apache Spark"],
-    type: "work",
-    icon: <Brain className="w-6 h-6" />,
-    metrics: [
-      { icon: <Star className="w-4 h-4" />, value: "94%", label: "Accuracy" },
-      { icon: <Zap className="w-4 h-4" />, value: "70%", label: "Faster" },
-      { icon: <TrendingUp className="w-4 h-4" />, value: "10K", label: "Predictions/Day" }
-    ],
-    color: "from-purple-500 to-pink-500",
-    companyLogo: "🧠"
-  },
-  {
-    company: "Startup Accelerator",
-    role: "Full Stack Developer",
-    period: "2020 - 2021",
-    location: "Austin, TX",
-    description: "Built MVP products for 5+ startups, handling both frontend and backend development",
-    achievements: [
-      "Developed 3 production-ready applications from concept to deployment",
-      "Implemented real-time features using WebSocket and Socket.io",
-      "Optimized database queries improving performance by 60%",
-      "Integrated third-party APIs and payment processing systems"
-    ],
-    technologies: ["JavaScript", "React", "Express.js", "MongoDB", "Firebase", "Stripe"],
-    type: "work",
-    icon: <Code2 className="w-6 h-6" />,
-    metrics: [
-      { icon: <Rocket className="w-4 h-4" />, value: "5+", label: "Startups" },
-      { icon: <Zap className="w-4 h-4" />, value: "60%", label: "Performance" },
-      { icon: <TrendingUp className="w-4 h-4" />, value: "3", label: "Products" }
-    ],
-    color: "from-green-500 to-emerald-500",
-    companyLogo: "⚡"
-  },
+  company: "RegisterKaro Safe Ledger Private Limited",
+  role: "Full Stack Developer Intern",
+  period: "Feb 2025 - May 2025",
+  location: "Gurgaon, Haryana, India",
+  description: "Developed full-stack modules for a government startup registration platform serving thousands of clients nationwide.",
+  achievements: [
+    "Translated Figma UI/UX designs into responsive Next.js + TypeScript + TailwindCSS landing pages and service dashboards.",
+    "Implemented secure authentication and role-based access control using Node.js and Express.",
+    "Designed and optimized RESTful APIs for startup registration, payment, and compliance workflows.",
+    "Integrated MySQL and PostgreSQL databases ensuring high data accuracy and transactional integrity.",
+    "Collaborated with backend team to enhance API performance and reduce response times by 40%.",
+    "Contributed to production deployment and bug resolution during live rollout cycles."
+  ],
+  technologies: ["Next.js", "TypeScript", "TailwindCSS", "Node.js", "Express.js", "MySQL", "PostgreSQL"],
+  type: "work",
+  icon: <Code2 className="w-6 h-6" />,
+  metrics: [
+    { icon: <Rocket className="w-4 h-4" />, value: "1K+", label: "Startups Served" },
+    { icon: <Zap className="w-4 h-4" />, value: "40%", label: "Faster APIs" },
+    { icon: <TrendingUp className="w-4 h-4" />, value: "100%", label: "Design to Deployment" }
+  ],
+  color: "from-green-500 to-emerald-500",
+  companyLogo: "🏢"
+},
+{
+  company: "AI & Machine Learning (Personal Research)",
+  role: "Machine Learning Enthusiast",
+  period: "2025 - Present",
+  location: "Remote / Self-Learning",
+  description: "Explored Artificial Intelligence and Data Science concepts through self-learning and hands-on projects using Python and ML frameworks.",
+  achievements: [
+    "Completed extensive hands-on training in Python, NumPy, Pandas, Matplotlib, Seaborn, and Scikit-learn.",
+    "Developed and deployed an Accident Severity Prediction model using Logistic Regression achieving 85% accuracy.",
+    "Built a Customer Churn Prediction model using Linear Regression with 78% accuracy on real-world datasets.",
+    "Performed feature engineering, data cleaning, and visualization to improve model interpretability.",
+    "Explored supervised learning techniques for regression and classification problems.",
+    "Gained strong understanding of end-to-end ML workflow — from preprocessing to model evaluation and deployment."
+  ],
+  technologies: ["Python", "NumPy", "Pandas", "Seaborn", "Matplotlib", "Scikit-learn","Streamlit"],
+  type: "learning",
+  icon: <Brain className="w-6 h-6" />,
+  metrics: [
+    { icon: <Star className="w-4 h-4" />, value: "85%", label: "Accident Model Accuracy" },
+    { icon: <Zap className="w-4 h-4" />, value: "78%", label: "Churn Model Accuracy" },
+    { icon: <TrendingUp className="w-4 h-4" />, value: "100%", label: "Hands-on Practice" }
+  ],
+  color: "from-purple-500 to-pink-500",
+  companyLogo: "🧠"
+},
+//  {
+//     company: "AI Research Lab",
+//     role: "Machine Learning Engineer",
+//     period: "2021 - 2022", 
+//     location: "Boston, MA",
+//     description: "Developed and deployed ML models for predictive analytics and computer vision applications",
+//     achievements: [
+//       "Built ensemble models achieving 94% accuracy on complex classification tasks",
+//       "Reduced model inference time by 70% through optimization and quantization",
+//       "Published research paper on novel neural network architectures",
+//       "Implemented automated ML pipelines serving 10,000+ predictions daily"
+//     ],
+//     technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Apache Spark"],
+//     type: "work",
+//     icon: <Brain className="w-6 h-6" />,
+//     metrics: [
+//       { icon: <Star className="w-4 h-4" />, value: "94%", label: "Accuracy" },
+//       { icon: <Zap className="w-4 h-4" />, value: "70%", label: "Faster" },
+//       { icon: <TrendingUp className="w-4 h-4" />, value: "10K", label: "Predictions/Day" }
+//     ],
+//     color: "from-purple-500 to-pink-500",
+//     companyLogo: "🧠"
+//   },
+  // {
+  //   company: "Startup Accelerator",
+  //   role: "Full Stack Developer",
+  //   period: "2020 - 2021",
+  //   location: "Austin, TX",
+  //   description: "Built MVP products for 5+ startups, handling both frontend and backend development",
+  //   achievements: [
+  //     "Developed 3 production-ready applications from concept to deployment",
+  //     "Implemented real-time features using WebSocket and Socket.io",
+  //     "Optimized database queries improving performance by 60%",
+  //     "Integrated third-party APIs and payment processing systems"
+  //   ],
+  //   technologies: ["JavaScript", "React", "Express.js", "MongoDB", "Firebase", "Stripe"],
+  //   type: "work",
+  //   icon: <Code2 className="w-6 h-6" />,
+  //   metrics: [
+  //     { icon: <Rocket className="w-4 h-4" />, value: "5+", label: "Startups" },
+  //     { icon: <Zap className="w-4 h-4" />, value: "60%", label: "Performance" },
+  //     { icon: <TrendingUp className="w-4 h-4" />, value: "3", label: "Products" }
+  //   ],
+  //   color: "from-green-500 to-emerald-500",
+  //   companyLogo: "⚡"
+  // },
   {
     company: "LeetCode & Competitive Programming",
     role: "500+ Problems Solved • Top 5% Global",
-    period: "2019 - Present",
+    period: "2022 - Present",
     location: "Global",
     description: "Consistent practice in algorithms, data structures, and system design principles",
     achievements: [
       "350 Easy problems with optimal time/space complexity solutions",
-      "100 Medium problems focusing on efficient algorithms and patterns", 
+      "250 Medium problems focusing on efficient algorithms and patterns", 
       "50 Hard problems demonstrating advanced problem-solving skills",
-      "Participated in 30+ coding contests with consistent top 20% rankings"
+      "Participated in 20+ coding contests with consistent top 20% rankings"
     ],
-    technologies: ["Algorithms", "Data Structures", "System Design", "OOP", "Databases"],
+    technologies: [
+  "Data Structures & Algorithms",
+  "System Design",
+  "Object-Oriented Programming (OOP)",
+  "Database Design",
+  "C++",
+  "Python",
+  "JavaScript",
+  "MySQL"
+],
+
     type: "achievement",
     icon: <Award className="w-6 h-6" />,
     metrics: [
@@ -474,14 +560,14 @@ export default function EnhancedExperience() {
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             <EnhancedStat 
-              number="3+" 
+              number="2+" 
               label="Years Experience" 
               description="Building production systems"
               color="from-blue-500 to-cyan-500"
               delay={1.2}
             />
             <EnhancedStat 
-              number="50+" 
+              number="10+" 
               label="Projects Delivered" 
               description="From concept to production"
               color="from-green-500 to-emerald-500"
