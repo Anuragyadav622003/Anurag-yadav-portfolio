@@ -57,7 +57,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-primary/20 mb-8"
         >
           <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-          <span className="text-sm font-mono">500+ LeetCode Problems Solved</span>
+          <span className="text-sm font-mono">150+ LeetCode Problems Solved</span>
         </motion.div>
 
         <motion.h1
@@ -91,7 +91,7 @@ export default function Hero() {
           className="text-xl text-gray-300 max-w-2xl mx-auto mb-12"
         >
           Building scalable systems and intelligent solutions with 
-          <span className="text-primary"> 500+ LeetCode mastery</span>, 
+          <span className="text-primary"> 150+ LeetCode mastery</span>, 
           production-grade architecture, and cutting-edge machine learning.
         </motion.p>
 
