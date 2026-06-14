@@ -3,7 +3,9 @@
 
 import { motion } from 'framer-motion'
 import { Project } from '@/types/project'
-import { ExternalLink, Github, BarChart3 } from 'lucide-react'
+import { ExternalLink, Github, BarChart3, Lock } from 'lucide-react'
+import ProjectThumbnail from './ProjectThumbnail'
+import { getCategoryBadgeClass } from '@/lib/projectVisuals'
 
 interface ProjectCardProps {
   project: Project
@@ -22,17 +24,13 @@ export default function ProjectCard({ project, index, onSelect }: ProjectCardPro
       className="bg-card rounded-2xl p-6 border border-gray-800 hover:border-primary/30 transition-all duration-300 cursor-pointer group"
       onClick={() => onSelect(project)}
     >
+      <ProjectThumbnail project={project} className="mb-5" />
+
       <div className="flex justify-between items-start mb-4">
-        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-          project.category === 'ml' 
-            ? 'bg-purple-500/20 text-purple-300'
-            : project.category === 'backend'
-            ? 'bg-blue-500/20 text-blue-300'
-            : 'bg-green-500/20 text-green-300'
-        }`}>
-          {project.category.toUpperCase()}
+        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getCategoryBadgeClass(project.category)}`}>
+          {project.category === 'work' ? 'WORK' : project.category.toUpperCase()}
         </span>
-        
+
         {project.metrics && (
           <BarChart3 className="w-4 h-4 text-gray-400 group-hover:text-primary" />
         )}
@@ -77,28 +75,39 @@ export default function ProjectCard({ project, index, onSelect }: ProjectCardPro
         <span className="text-primary text-sm font-semibold">
           View Details
         </span>
-        
+
         <div className="flex gap-3">
-          {project.demoUrl && (
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="text-gray-400 hover:text-primary transition-colors"
-            >
-              <ExternalLink className="w-4 h-4" />
-            </a>
+          {project.confidential ? (
+            <span className="flex items-center gap-1 text-gray-500 text-xs">
+              <Lock className="w-3.5 h-3.5" />
+              Work project
+            </span>
+          ) : (
+            <>
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-gray-400 hover:text-primary transition-colors"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
+              {project.codeUrl && (
+                <a
+                  href={project.codeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-gray-400 hover:text-primary transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
+              )}
+            </>
           )}
-          <a
-            href={project.codeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="text-gray-400 hover:text-primary transition-colors"
-          >
-            <Github className="w-4 h-4" />
-          </a>
         </div>
       </div>
     </motion.div>

@@ -3,10 +3,10 @@ export interface Project {
   id: string
   title: string
   description: string
-  category: 'ml' | 'fullstack' | 'backend'
+  category: 'ml' | 'fullstack' | 'backend' | 'work'
   technologies: string[]
   demoUrl?: string
-  codeUrl: string
+  codeUrl?: string
   featured: boolean
   metrics: Record<string, string>
   images: string[]
@@ -14,4 +14,6 @@ export interface Project {
   challenges: string[]
   solutions: string[]
   status: 'completed' | 'in-progress'
+  company?: string
+  confidential?: boolean
 }
