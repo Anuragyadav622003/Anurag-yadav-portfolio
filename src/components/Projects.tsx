@@ -9,10 +9,10 @@ import { Project } from '@/types/project'
 import ProjectModal from './ProjectModal'
 import ProjectCard from './ProjectCard'
 
-const categories = ['all', 'ml', 'fullstack', 'backend'] as const
+const categories = ['all', 'work', 'fullstack', 'backend', 'ml'] as const
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'ml' | 'fullstack' | 'backend'>('all')
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'work' | 'ml' | 'fullstack' | 'backend'>('all')
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [search, setSearch] = useState('')
 
@@ -78,7 +78,11 @@ export default function Projects() {
                   : 'bg-card text-gray-300 hover:bg-card/80 border border-gray-700'
               }`}
             >
-              {category === 'all' ? 'All Projects' : category.toUpperCase()}
+              {category === 'all'
+                ? 'All Projects'
+                : category === 'work'
+                  ? 'Work'
+                  : category.toUpperCase()}
             </motion.button>
           ))}
           </div>

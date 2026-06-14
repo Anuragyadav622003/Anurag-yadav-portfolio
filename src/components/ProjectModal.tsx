@@ -3,8 +3,10 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { Project } from '@/types/project'
-import { X, ExternalLink, Github, BarChart3, Clock, Code2, AlertCircle, CheckCircle } from 'lucide-react'
+import { X, ExternalLink, Github, BarChart3, Clock, Code2, AlertCircle, CheckCircle, Lock } from 'lucide-react'
 import { useEffect } from 'react'
+import ProjectThumbnail from './ProjectThumbnail'
+import { getCategoryBadgeClass } from '@/lib/projectVisuals'
 
 interface ProjectModalProps {
   project: Project
@@ -40,14 +42,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           <div className="flex justify-between items-start p-6 border-b border-gray-800">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2">
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  project.category === 'ml' 
-                    ? 'bg-purple-500/20 text-purple-300'
-                    : project.category === 'backend'
-                    ? 'bg-blue-500/20 text-blue-300'
-                    : 'bg-green-500/20 text-green-300'
-                }`}>
-                  {project.category.toUpperCase()}
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getCategoryBadgeClass(project.category)}`}>
+                  {project.category === 'work' ? 'WORK PROJECT' : project.category.toUpperCase()}
                 </span>
                 <span className={`flex items-center gap-1 px-2 py-1 rounded text-xs ${
                   project.status === 'completed' 
@@ -74,7 +70,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           <div className="p-6 space-y-8">
-            <div className="flex gap-4">
+            <ProjectThumbnail project={project} className="min-h-[180px]" />
+
+            <div className="flex flex-wrap gap-4">
               {project.demoUrl && (
                 <a
                   href={project.demoUrl}
@@ -83,18 +81,27 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   className="flex items-center gap-2 bg-primary text-black px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  Live Demo
+                  {project.category === 'backend' && project.demoUrl.includes('github.com')
+                    ? 'Setup Guide'
+                    : 'Live Demo'}
                 </a>
               )}
-              <a
-                href={project.codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors"
-              >
-                <Github className="w-4 h-4" />
-                View Code
-              </a>
+              {project.codeUrl ? (
+                <a
+                  href={project.codeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 border border-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                  View Code
+                </a>
+              ) : project.confidential ? (
+                <span className="flex items-center gap-2 border border-gray-700 text-gray-400 px-6 py-3 rounded-full text-sm">
+                  <Lock className="w-4 h-4" />
+                  Proprietary work project — code not public
+                </span>
+              ) : null}
             </div>
 
             {Object.keys(project.metrics).length > 0 && (

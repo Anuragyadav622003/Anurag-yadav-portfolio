@@ -9,6 +9,8 @@ export const personalInfo = {
     'Full-Stack SDE with production experience in startup environments, building microservices and customer-facing products. Strong in NestJS APIs, React/Next.js, system design fundamentals, and end-to-end feature ownership. Currently at Mozark building Test Studio — an automation testing platform for mobile and web apps with Appium Inspector for mobile testing and NestJS/Next.js full-stack development.',
   currentRole: 'SDE1 @ Mozark',
   resumePath: '/AnuragYadavResume.png',
+  resumePdfPath: '/AnuragYadavResume.pdf',
+  availability: 'Open to opportunities · Available immediately',
   openToWork: true,
 }
 
@@ -23,6 +25,7 @@ export const navSections = [
   { id: 'projects', label: 'Projects', href: '#projects' },
   { id: 'skills', label: 'Skills', href: '#skills' },
   { id: 'experience', label: 'Experience', href: '#experience' },
+  { id: 'education', label: 'Education', href: '#education' },
   { id: 'achievements', label: 'Achievements', href: '#achievements' },
   { id: 'certifications', label: 'Certs', href: '#certifications' },
   { id: 'contact', label: 'Contact', href: '#contact' },
@@ -354,6 +357,22 @@ export const currentProject = {
   tech: ['Next.js', 'NestJS', 'Prisma', 'Appium', 'Appium Inspector', 'Zustand', 'Python', 'TypeScript'],
 }
 
+export const education = [
+  {
+    id: 'btech-csjm',
+    degree: 'B.Tech',
+    field: 'Computer Science & Engineering',
+    institution: 'Chhatrapati Shahu Ji Maharaj University (CSJM), Kanpur',
+    location: 'Kanpur, Uttar Pradesh, India',
+    period: '2021 – 2025',
+    type: 'degree' as const,
+    color: 'from-cyan-500 to-blue-500',
+    detail:
+      'Undergraduate program building foundations in software engineering, data structures, algorithms, databases, and full-stack development.',
+    highlights: ['Data Structures & Algorithms', 'Software Engineering', 'Database Systems', 'Web Development'],
+  },
+]
+
 export const certifications = [
   {
     title: 'Mozark Offer Letter',
@@ -362,6 +381,8 @@ export const certifications = [
     year: '2026',
     icon: '🎯',
     color: 'from-indigo-500 to-violet-500',
+    certificateUrl: 'https://drive.google.com/file/d/1HDao9BQm9lkGx6-a0p0t7I_5UCEGgnYe/view?usp=sharing',
+    certificateLabel: 'View Offer Letter',
   },
   {
     title: 'SoftxAI Internship',
@@ -370,6 +391,8 @@ export const certifications = [
     year: '2025',
     icon: '⚡',
     color: 'from-blue-500 to-cyan-500',
+    certificateUrl: 'https://drive.google.com/file/d/18zI4HmD-r5pcUcmwwdA-t_hePwCmnRlA/view?usp=sharing',
+    certificateLabel: 'View Offer Letter',
   },
 ]
 
@@ -393,5 +416,9 @@ export const faqs = [
   {
     q: 'How can I reach you quickly?',
     a: 'Email at anuragyadav622003@gmail.com or connect on LinkedIn. You can also use the contact form on this site — it opens your email client directly.',
+  },
+  {
+    q: 'What is your availability?',
+    a: 'Open to full-stack and SDE opportunities. Available immediately for the right role — open to hybrid, remote-friendly, and relocation options.',
   },
 ]

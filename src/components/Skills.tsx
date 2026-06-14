@@ -2,8 +2,9 @@
 
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { Code2, Database, Brain, Cloud, Server, Layout, Network } from 'lucide-react'
-import { skillCategories, leetCode } from '@/data/portfolio'
+import { Code2, Database, Cloud, Server, Layout, Network } from 'lucide-react'
+import { skillCategories } from '@/data/portfolio'
+import LeetCodeBadge from './LeetCodeBadge'
 
 const iconMap = {
   code: Code2,
@@ -147,12 +148,11 @@ export default function Skills() {
           </motion.div>
         </AnimatePresence>
 
-        {/* All skills grid overview */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10"
         >
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
@@ -187,53 +187,7 @@ export default function Skills() {
           ))}
         </motion.div>
 
-        {/* LeetCode section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.7 }}
-          className="glass-effect rounded-3xl p-8 md:p-10 border border-primary/20 mt-12"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Brain className="w-7 h-7 text-primary" />
-            <h3 className="text-3xl font-black text-white">Competitive Programming</h3>
-          </div>
-          <p className="text-center text-gray-400 text-sm mb-8">
-            Active profile ·{' '}
-            <a
-              href={leetCode.profileUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              @{leetCode.username}
-            </a>
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { number: `${leetCode.totalSolved}+`, label: 'Total Solved', color: 'from-green-500 to-emerald-500', icon: '✅' },
-              { number: 'DSA', label: 'Daily Practice', color: 'from-yellow-500 to-orange-500', icon: '⚡' },
-              { number: 'Active', label: 'New Profile', color: 'from-red-500 to-pink-500', icon: '🔥' },
-            ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.8 + i * 0.1 }}
-                whileHover={{ scale: 1.05, y: -4 }}
-                className="bg-card rounded-2xl p-6 text-center border border-gray-800 hover:border-primary/40 transition-all"
-              >
-                <div className="text-2xl mb-2">{stat.icon}</div>
-                <div
-                  className={`text-4xl font-black bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}
-                >
-                  {stat.number}
-                </div>
-                <div className="text-gray-400 text-sm uppercase tracking-wider">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        <LeetCodeBadge />
       </div>
     </section>
   )

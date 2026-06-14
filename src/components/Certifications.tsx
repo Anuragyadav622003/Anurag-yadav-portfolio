@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Award } from 'lucide-react'
+import { Award, ExternalLink } from 'lucide-react'
 import { certifications } from '@/data/portfolio'
 
 export default function Certifications() {
@@ -51,6 +51,17 @@ export default function Certifications() {
                   </div>
                   <p className="text-primary text-sm font-medium mt-1">{cert.issuer}</p>
                   <p className="text-gray-400 text-sm mt-2">{cert.detail}</p>
+                  {cert.certificateUrl && (
+                    <a
+                      href={cert.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-primary hover:text-white transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      {cert.certificateLabel ?? 'View Certificate'}
+                    </a>
+                  )}
                 </div>
               </div>
               <div

@@ -17,6 +17,7 @@ import {
   FileDown,
   X,
   Eye,
+  GraduationCap,
 } from 'lucide-react'
 import { useShortcutLabel } from '@/lib/shortcuts'
 import { navSections, personalInfo, socialLinks, leetCode } from '@/data/portfolio'
@@ -28,6 +29,7 @@ const sectionIcons: Record<string, React.ReactNode> = {
   projects: <FolderOpen className="w-4 h-4" />,
   skills: <Wrench className="w-4 h-4" />,
   experience: <Briefcase className="w-4 h-4" />,
+  education: <GraduationCap className="w-4 h-4" />,
   achievements: <Trophy className="w-4 h-4" />,
   contact: <Mail className="w-4 h-4" />,
 }
@@ -81,8 +83,8 @@ export default function CommandPalette() {
       icon: <FileDown className="w-4 h-4" />,
       action: () => {
         const a = document.createElement('a')
-        a.href = personalInfo.resumePath
-        a.download = 'Anurag_Yadav_Resume.png'
+        a.href = personalInfo.resumePdfPath
+        a.download = 'Anurag_Yadav_Resume.pdf'
         a.click()
         setOpen(false)
       },

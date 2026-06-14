@@ -50,6 +50,7 @@ export default function Contact() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Open to opportunities, collaborations, and interesting projects
           </p>
+          <p className="text-sm text-success mt-3 font-medium">{personalInfo.availability}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">

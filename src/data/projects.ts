@@ -3,6 +3,37 @@ import { Project } from '@/types/project'
 
 export const projects: Project[] = [
   {
+    id: 'test-studio-mozark',
+    title: 'Test Studio @ Mozark',
+    description:
+      'Full-stack automation testing platform for mobile and web — NestJS APIs, Next.js workspace UI, and Appium Inspector workflows (work project, sanitized case study).',
+    category: 'work',
+    company: 'Mozark',
+    confidential: true,
+    technologies: ['Next.js', 'NestJS', 'Prisma', 'TypeScript', 'Appium', 'Appium Inspector', 'Zustand', 'Python'],
+    featured: true,
+    metrics: {
+      Scope: 'Mobile + Web',
+      Stack: 'NestJS + Next.js',
+      Role: 'SDE1 Full-Stack',
+      Status: 'In Production',
+    },
+    images: [],
+    longDescription:
+      'At Mozark, I contribute to Test Studio — a production automation testing platform used for mobile and web quality workflows. My work spans NestJS REST APIs, Next.js/React workspace UI, Prisma-backed services, and Appium Inspector integrations for real-device testing. This is a confidential work project; details are shared at a high level without proprietary internals.',
+    challenges: [
+      'Cross-platform test execution reliability across mobile and web environments',
+      'Synchronizing device preview, workspace state, and backend services',
+      'Building a scalable full-stack workspace for test operations teams',
+    ],
+    solutions: [
+      'Developed NestJS APIs and Next.js UI for unified mobile + web testing workflows',
+      'Implemented three-pane workspace (test workspace, device preview, execution)',
+      'Improved execution reliability by fixing overlay, sync, and API edge cases',
+    ],
+    status: 'in-progress',
+  },
+  {
     id: 'centralized-auth-microservices',
     title: 'Centralized Auth & Reminder Microservices',
     description:
@@ -17,7 +48,7 @@ export const projects: Project[] = [
       Auth: 'JWT-based',
       Deployment: 'Dockerized',
     },
-    images: ['/projects/auth-microservices.jpg'],
+    images: [],
     longDescription:
       'A production-grade distributed microservices architecture featuring centralized authentication, reminder scheduling, and inter-service communication via TCP and Redis. Includes an API Gateway for reliable, loosely coupled backend design.',
     challenges: [
@@ -47,7 +78,7 @@ export const projects: Project[] = [
       'Concurrent Users': '1000+',
       Uptime: '99.9%',
     },
-    images: ['/projects/expense-tracker-1.jpg'],
+    images: [],
     longDescription:
       'A production-grade expense tracking system with advanced features like category-based budgeting, spending trends, and financial insights.',
     challenges: [
@@ -77,7 +108,7 @@ export const projects: Project[] = [
       'User Engagement': '40% increase',
       'Course Completion': '75% rate',
     },
-    images: ['/projects/e-learning-1.jpg'],
+    images: [],
     longDescription:
       'A comprehensive learning platform that provides interactive courses, real-time progress tracking, and collaborative learning features.',
     challenges: [
@@ -107,7 +138,7 @@ export const projects: Project[] = [
       recall: '82%',
       f1: '83%',
     },
-    images: ['/projects/accident-predictor-1.jpg'],
+    images: [],
     longDescription:
       'A comprehensive machine learning solution that analyzes various factors to predict the severity of road accidents.',
     challenges: [

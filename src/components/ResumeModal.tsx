@@ -57,14 +57,23 @@ export default function ResumeModal() {
               </div>
             </div>
 
-            <div className="flex gap-3 p-4 border-t border-gray-800">
+            <div className="flex flex-col sm:flex-row gap-3 p-4 border-t border-gray-800">
               <a
-                href={personalInfo.resumePath}
-                download="Anurag_Yadav_Resume.png"
+                href={personalInfo.resumePdfPath}
+                download="Anurag_Yadav_Resume.pdf"
                 className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-secondary text-black py-3 rounded-xl font-bold text-sm hover:shadow-lg transition-all"
               >
                 <FileDown className="w-4 h-4" />
-                Download Resume
+                Download PDF
+              </a>
+              <a
+                href={personalInfo.resumePdfPath}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-700 text-gray-300 hover:text-white hover:border-primary/50 transition-all text-sm"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Open PDF
               </a>
               <a
                 href={personalInfo.resumePath}
@@ -73,7 +82,7 @@ export default function ResumeModal() {
                 className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-700 text-gray-300 hover:text-white hover:border-primary/50 transition-all text-sm"
               >
                 <ExternalLink className="w-4 h-4" />
-                Open Full
+                View PNG
               </a>
             </div>
           </motion.div>
