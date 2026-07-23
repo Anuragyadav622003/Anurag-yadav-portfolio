@@ -312,7 +312,7 @@ export const leetCode = {
 }
 
 export const liveStats = {
-  yearsExperience: 2,
+  yearsExperience: 1,
   projectsDelivered: 10,
   testCoverage: 85,
 }
